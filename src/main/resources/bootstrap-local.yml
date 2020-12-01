@@ -6,12 +6,12 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 172.16.15.3:8849
+        server-addr: 172.16.15.3:8849  #  注册中心地址
       config:
-        namespace: 824c6924-dafc-4441-8d7b-a1e35451db43
+        namespace: 824c6924-dafc-4441-8d7b-a1e35451db43 #  命名空间
         server-addr: 172.16.15.3:8849
         extension-configs:   # 引入多配置文件，一个配置文件对应一个data-id，data-id必须带一个group
-          - data-id: cash-server.yml
+          - data-id: rabbit-server.yml
             group: DEFAULT_GROUP
           - data-id: rabbitmq.yml
             group: DEFAULT_GROUP
