@@ -6,3 +6,9 @@ spring:
     password: ENC(ofVRu6dQByUYJdbsGYbq2HcqJIIkR6bj/JhkLO7OQUpaWxQ7ru4mq/XOANH6th+M)
     publisher-confirms: true
     publisher-confirm-type: correlated
+    #开启ack
+    listener:
+      direct:
+        acknowledge-mode: manual
+      simple:
+        acknowledge-mode: manual #采取手动应答
