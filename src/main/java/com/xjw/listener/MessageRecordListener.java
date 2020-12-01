@@ -47,6 +47,7 @@ public class MessageRecordListener {
             if (ops.setIfAbsent(messageRecord.getMessageId(), messageRecord.getMessageId())) {
                 log.info("下单成功，执行仓储服务");
                 log.info("下单成功，执行积分服务");
+                // 手动ack
                 channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
             }
         } catch (Exception e) {
